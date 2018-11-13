@@ -124,7 +124,7 @@ class OpenAPIConverter(object):
             dump_to = getattr(field, 'dump_to', None)
             load_from = getattr(field, 'load_from', None)
             return dump_to or load_from or name
-        return field.data_key or name
+        return name
 
     def map_to_openapi_type(self, *args):
         """Decorator to set mapping for custom fields.
